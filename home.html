@@ -8,12 +8,21 @@
   </head>
   <body>
     <nav class="navbar">
-
+        <h2>The Shoppies</h2>
     </nav>
 
     <main>
-        <h1>The Shoppies</h1>
-        <input name="search" placeholder="Enter a movie title... e.g. Interstellar">
+        <label for="param-select">Search parameter</label>
+        <select id="param-select">
+            <option>Title</option>
+            <option>Author</option>
+            <option>Release date</option>
+        </select>
+
+        <label for="movie-search">Movie title:-</label>
+        <input name="search" id="movie-search" placeholder="Enter a movie title... e.g. Interstellar">
+
+        
     </main>
 
   </body>
