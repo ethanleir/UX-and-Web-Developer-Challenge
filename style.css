@@ -2,6 +2,25 @@
   box-sizing: border-box;
 }
 
+nav {
+  display: block;
+}
+
+nav h2, ul {
+  display: inline-flex;
+}
+
+nav ul {
+  list-style: none;
+  margin: auto;
+  float: right;
+}
+
+nav ul li {
+  padding: 30px;
+
+}
+
 /*Smart phones*/
 
 /*Tablets*/
