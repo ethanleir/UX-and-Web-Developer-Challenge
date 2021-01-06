@@ -2,26 +2,57 @@
   box-sizing: border-box;
 }
 
-
-.nominationsMenu {
-  display: flex;
-  justify-content: flex-end;
+.text{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 32px;
+  color: black;
 }
 
-#open {
+#nominationsMenu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100px;
+  background-color: rgb(150, 150, 150); /*should be the same value as nominations-open*/
+  z-index: 2;
+  transition: width 0.35s;
+}
+
+
+.nominations-open {
   width: 100px;
   height: 100px;
+  left: 0;
   padding: 25px;
   background-color: rgb(150, 150, 150);
+}
+
+.nominations-list{
+  height: 100%;
+  width: 100%;
+  background-color: white;
 }
 
 /*I'm not sure how it would be best to put this in the optical center*/
 h1.text {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  color: rgb(150, 150, 150);
+  color: #3498db;
   font-size: 50px;
   padding-bottom: 20px;
   font-weight: bold;
+}
+
+
+#gray-filter{
+  display: none;
+  position: fixed;
+  background-color: black;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: opacity 0.35s;
 }
 
 .flex-center{
