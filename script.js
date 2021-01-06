@@ -1,7 +1,8 @@
+let open = false;
+
 function search(){
     
     let input = document.getElementById("movie-search").value;
-    let mode = 'title'
 
     let i = 0;
     while (i < input.length){
@@ -21,5 +22,23 @@ function search(){
         console.log(response.headers);
         console.log(response.config);
     });
+
+}
+
+
+function openNominationsMenu(){
+
+    if(open === false){
+        document.getElementById("nominationsMenu").style.width = "300px";
+        document.getElementById("gray-filter").style.display = "block";
+        document.getElementById("gray-filter").style.opacity = "0.5";
+        open = true;
+    }
+    else{
+        document.getElementById("nominationsMenu").style.width = "100px";
+        document.getElementById("gray-filter").style.opacity = "0";
+        document.getElementById("gray-filter").style.display = "none";
+        open = false;
+    }
 
 }
