@@ -55,9 +55,30 @@ h1.text {
   transition: opacity 0.35s;
 }
 
+.container {
+  /* display: flex; */
+}
+
 .flex-center{
   display: flex;
   justify-content: center;
+}
+
+.flex-center input, select {
+  height: 50px;
+  border: none;
+  outline: none;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  box-shadow: 5px 5px 15px rgba(168, 168, 168, 0.5);
+}
+
+.flex-center input {
+  width: 600px;
 }
 
 /*Smart phones*/

@@ -15,8 +15,8 @@
 
 
   </head>
-  <body style="background-color: rgb(255, 255, 255);">
-    
+  <body style="background-color: rgb(250, 250, 250);">
+
     <script src="script.js"></script>
 
     <div id="gray-filter" onclick="openNominationsMenu()"></div>
@@ -28,16 +28,22 @@
     </div>
 
     <main>
-      <div class="flex-center">
-        <h1 class="text">The Shoppies</h1>
-      </div>
-      <div class="flex-center">
+      <div class="wrapper">
+        <div class="flex-center">
+          <h1 class="text">The Shoppies</h1>
+        </div>
+        <div class="flex-center">
+          <input name="search" id="movie-search" placeholder="Enter a movie title... e.g. Interstellar" autocomplete="off">
 
-        <label for="movie-search">Movie title:-</label>
-        <input name="search" id="movie-search" placeholder="Enter a movie title... e.g. Interstellar">
-
-      </div>
-
+          <select id="param-select">
+              <option value="" disabled selected>Search parameter</option>
+              <option>All</option>
+              <option>Title</option>
+              <option>Author</option>
+              <option>Release date</option>
+          </select>
+        </div>
+    </div>
     </main>
 
     <!-- Optional JavaScript -->

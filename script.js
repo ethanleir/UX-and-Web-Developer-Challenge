@@ -1,8 +1,10 @@
 let open = false;
 
 function search(){
-    
-    let input = document.getElementById("movie-search").value;
+
+    // let input = document.getElementById("movie-search").value;
+    let input = 'Star Wars';
+    let mode = 'title';
 
     let i = 0;
     while (i < input.length){
@@ -21,10 +23,20 @@ function search(){
         console.log(response.statusText);
         console.log(response.headers);
         console.log(response.config);
+    }, (error)=> {
+        console.log(error);
     });
 
 }
 
+// function handleCalls(){
+//     search();
+
+// }
+
+// $(function() {
+//     handleCalls();
+// });
 
 function openNominationsMenu(){
 
