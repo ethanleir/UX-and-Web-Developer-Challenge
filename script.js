@@ -1,4 +1,4 @@
-let open = false;
+const axios = require('axios');
 
 function search(){
 
@@ -9,7 +9,7 @@ function search(){
     let i = 0;
     while (i < input.length){
         if(input[i] === ' '){
-            input = input.substring(0, i) + input.substring(i+1, input.length);
+            input = input.substring(0, i) + '+' + input.substring(i+1, input.length);
         }
         else{
             i++;
