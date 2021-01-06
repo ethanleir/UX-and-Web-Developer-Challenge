@@ -17,28 +17,26 @@
       
     <div class="nominationsMenu">
       <img id="open" src="Icon_White_V1.png" alt="nominations" aria-hidden="true"></img>
-      <!--<i class="fa fa-address-book" aria-hidden="true"></i>-->
         
     </div>
 
     <main>
-      <div class="flex-center">
-        <h1 class="text">The Shoppies</h1>
-      </div>
-      <div class="flex-center">
-      <label for="param-select">Search parameter:-</label>
-      <select id="param-select">
-          <option>All</option>
-          <option>Title</option>
-          <option>Author</option>
-          <option>Release date</option>
-      </select>
+      <div class="wrapper">
+        <div class="flex-center">
+          <h1 class="text">The Shoppies</h1>
+        </div>
+        <div class="flex-center">
+          <input name="search" id="movie-search" placeholder="Enter a movie title... e.g. Interstellar" autocomplete="off">
 
-        <label for="movie-search">Movie title:-</label>
-        <input name="search" id="movie-search" placeholder="Enter a movie title... e.g. Interstellar">
-
-      </div>
-
+          <select id="param-select">
+              <option value="" disabled selected>Search parameter</option>
+              <option>All</option>
+              <option>Title</option>
+              <option>Author</option>
+              <option>Release date</option>
+          </select>
+        </div>
+    </div>
     </main>
 
     <!-- Optional JavaScript -->
