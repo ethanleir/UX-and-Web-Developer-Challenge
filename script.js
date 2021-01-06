@@ -77,3 +77,32 @@ async function openNominationsMenu(){
     }
 
 }
+
+// // Search button transition
+// function handleButtonClicks() {
+//     $( ".search-btn" ).click(function() {
+//         $(this ).css('background', 'rgb(150, 150, 150)');
+//         // $(this).siblings().css('background', 'rgba(19, 19, 19, 0.76)')
+//     });
+// }
+
+function handleMovieDropdown() {
+    document.getElementById("movie-dropdown-content").classList.toggle("show");
+
+}
+
+function filterMovies() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("movie-input");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("movie-dropdown-content");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }   
+}

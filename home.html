@@ -34,15 +34,17 @@
           <h1 class="text">The Shoppies</h1>
         </div>
         <div class="flex-center">
-          <input name="search" id="movie-search" placeholder="Enter a movie title... e.g. Interstellar" autocomplete="off">
-
-          <select id="param-select">
-              <option value="" disabled selected>Search parameter</option>
-              <option>All</option>
-              <option>Title</option>
-              <option>Author</option>
-              <option>Release date</option>
-          </select>
+          <div class="movie-dropdown">
+            <button class="search-btn" onclick="handleMovieDropdown()">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+            <input type="text" id="movie-input" placeholder="Enter a movie title... e.g. Interstellar" autocomplete="off" onclick="handleMovieDropdown()" onkeyup="filterMovies()">
+            <div class="movie-dropdown-content" id="movie-dropdown-content">
+              <a href="">Movie 1</a>
+              <a href="">Movie 2</a>
+              <a href="">Movie 3</a>
+            </div>
+          </div>
         </div>
     </div>
     </main>

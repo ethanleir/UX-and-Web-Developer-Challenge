@@ -8,6 +8,8 @@
   color: black;
 }
 
+/* Nominations menu/button */
+
 #nominationsMenu {
   position: fixed;
   right: 0;
@@ -35,7 +37,8 @@
   background-color: white;
 }
 
-/*I'm not sure how it would be best to put this in the optical center*/
+/* Title/h1  */
+
 h1.text {
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: #3498db;
@@ -44,11 +47,15 @@ h1.text {
   font-weight: bold;
 }
 
+/* Nominations text transition (?) */
+
 .text.fade{
   opacity: 0;
   cursor: default;
   transition: opacity 0.15s;
 }
+
+/* Filter overlay */
 
 #gray-filter{
   display: none;
@@ -61,14 +68,22 @@ h1.text {
   transition: opacity 0.35s;
 }
 
-.container {
-  /* display: flex; */
-}
-
 .flex-center{
   display: flex;
   justify-content: center;
 }
+
+/* Content wrapper */
+
+.wrapper {
+  position: absolute;
+  top: 35%;
+  left: 25%;
+  box-shadow: 5px 5px 15px rgba(168, 168, 168, 0.5);
+  width: 50%;
+}
+
+/* Searchbar/Input */
 
 .flex-center input, select {
   height: 50px;
@@ -76,15 +91,68 @@ h1.text {
   outline: none;
 }
 
-.wrapper {
-  position: absolute;
-  top: 30%;
-  left: 25%;
-  box-shadow: 5px 5px 15px rgba(168, 168, 168, 0.5);
+.flex-center input {
+  width: 100%;
+  padding-left: 2% ;
+  font-size: 20px;
 }
 
-.flex-center input {
-  width: 600px;
+#movie-input:focus {
+  border-bottom: 1px solid rgba(168, 168, 168, 0.5);
+}
+
+.search-btn {
+  color: #3498db;
+  background: white;
+  width: 20%;
+  border:none;
+  border-left: 1px dashed rgb(150, 150, 150);
+  outline: none;
+}
+
+.search-btn:focus, .search-btn:hover {
+  outline: none;
+  background: rgba(150,150,150, 0.1);
+}
+
+/* Dropdown menu */
+
+.movie-dropdown {
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;
+  width: 100%;
+  
+}
+
+/* .container {
+  nothing
+} */
+
+.movie-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 50px;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  width: 100%;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.movie-dropdown-content a {
+  color: black;
+  pad: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.movie-dropdown-content a:hover {
+  background-color: brown;
+}
+
+.show {
+  display: block;
 }
 
 /*Smart phones*/
