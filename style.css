@@ -24,6 +24,7 @@
   height: 100px;
   left: 0;
   padding: 25px;
+  cursor: pointer;
   background-color: rgb(150, 150, 150);
 }
 
@@ -45,6 +46,7 @@ h1.text {
 
 .text.fade{
   opacity: 0;
+  cursor: default;
   transition: opacity 0.15s;
 }
 
