@@ -53,6 +53,7 @@ async function openNominationsMenu(){
         let nodeList = document.getElementsByClassName("text fade");
         let i = 0;
         while (i < nodeList.length){
+            nodeList[i].style.cursor = "text";
             nodeList[i].style.opacity = "1";
             i++;
         }
@@ -67,6 +68,7 @@ async function openNominationsMenu(){
         let nodeList = document.getElementsByClassName("text fade");
         let i = 0;
         while (i < nodeList.length){
+            nodeList[i].style.cursor = "default";
             nodeList[i].style.opacity = "0";
             i++;
         }
