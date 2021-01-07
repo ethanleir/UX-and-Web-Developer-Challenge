@@ -1,3 +1,4 @@
+const react = require('react');
 const axios = require('axios');
 
 function search(){
@@ -16,7 +17,7 @@ function search(){
         }
     }
 
-    axios.get('http://www.omdbapi.com/?apikey=d5fbf29f&t='.concat(input))
+    axios.get('http://www.omdbapi.com/?apikey=d5fbf29f&s='.concat(input))
     .then((response) => {
         console.log(response.data);
         console.log(response.status);
