@@ -36,12 +36,28 @@ function search(){
           var title = movies[i].Title;
             var year = movies[i].Year;
             var imdbID = movies[i].imdbID;
+            var poster = movies[i].Poster;
+            
+            var wrapper = document.createElement("div");
+            wrapper.class = "dropdown-wrapper";
+            wrapper.style.display = "flex";
+            
+                var imgElement = document.createElement("img");
+                imgElement.setAttribute("src", poster);
+                imgElement.class = "dropdown-option-img";
+                imgElement.style.width = "50px";
+                wrapper.appendChild(imgElement);
 
-          var element = document.createElement("div");
-          element.innerHTML = title + "<br>" + "<b> Date:" + year + "</b>";
-          element.id = imdbID;
-          element.class = "dropdown-option";
-          document.getElementsByClassName("movie-dropdown-content")[0].appendChild(element);
+                var element = document.createElement("div");
+                element.innerHTML = title + "<b> (" + year + ")</b>";
+                element.id = imdbID;
+                element.class = "dropdown-option";
+                wrapper.appendChild(element);
+
+                
+
+                document.getElementsByClassName("movie-dropdown-content")[0].appendChild(wrapper);
+          
         //   console.log(title)
           i++;
         });
