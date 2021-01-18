@@ -1,10 +1,20 @@
-const react = require('react');
-const axios = require('axios');
+// import axios from 'axios';
+
+function deleteOptions() {
+    let dropdownOptions = document.getElementsByClassName("dropdown-option");
+    let lenDropdownOptions = dropdownOptions.length;
+    
+    for(let i = 0; i < lenDropdownOptions; i++) {
+        // dropdownOptions[i].remove();
+        dropdownOptions[i].parentNode.removeChild(dropdownOptions[i]);
+    }
+}
+
 
 function search(){
-
-    // let input = document.getElementById("movie-search").value;
-    let input = 'Star Wars';
+    deleteOptions();
+    let input = document.getElementById("movie-input").value;
+    // let input = 'Star Wars';
     let mode = 'title';
 
     let i = 0;
@@ -19,16 +29,29 @@ function search(){
 
     axios.get('http://www.omdbapi.com/?apikey=d5fbf29f&s='.concat(input))
     .then((response) => {
-        console.log(response.data);
-        console.log(response.status);
-        console.log(response.statusText);
-        console.log(response.headers);
-        console.log(response.config);
+        // console.log(response.data);
+        let movies = response.data["Search"];
+        var i = 0;
+        
+        // Iterating through the movies
+        movies.forEach(function(movieSummary) {
+          var title = movies[i].Title;
+            var year = movies[i].Year;
+            var imdbID = movies[i].imdbID;
+
+          var element = document.createElement("div");
+          element.innerHTML = title + "<br>" + "<b> Date:" + year + "</b>";
+          element.id = imdbID;
+          element.class = "dropdown-option";
+          document.getElementsByClassName("movie-dropdown-content")[0].appendChild(element);
+        //   console.log(title)
+          i++;
+        });
     }, (error)=> {
         console.log(error);
     });
-
 }
+
 
 // function handleCalls(){
 //     search();
