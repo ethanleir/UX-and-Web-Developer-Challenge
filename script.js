@@ -1,12 +1,10 @@
 // import axios from 'axios';
 
 function deleteOptions() {
-    let dropdownOptions = document.getElementsByClassName("dropdown-option");
-    let lenDropdownOptions = dropdownOptions.length;
-    
-    for(let i = 0; i < lenDropdownOptions; i++) {
-        // dropdownOptions[i].remove();
-        dropdownOptions[i].parentNode.removeChild(dropdownOptions[i]);
+    let dropdownContent = document.getElementsByClassName("movie-dropdown-content")[0];
+
+    while(0 != dropdownContent.childNodes.length) {
+        dropdownContent.removeChild(dropdownContent.childNodes[0]);
     }
 }
 
